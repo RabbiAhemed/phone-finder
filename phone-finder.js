@@ -15,7 +15,7 @@ const displaySearchResult = phones => {
         const searchResult = document.getElementById("search-result");
         const div = document.createElement('div');
         div.innerHTML = ` <div class="card h-100 text-center shadow-lg">
-        <img id="phone-image" src="${phone.image}" class="card-img-top img-fluid w-50 h-75" alt="...">
+        <img id="phone-image" src="${phone.image}" class="card-img-top img-fluid w-25 h-25" alt="...">
         <h3>Name:${phone.phone_name}</h3>
         <p>Brand: ${phone.brand}</p>
         <button id="details-btn" onclick="loadDetails('${phone.slug}')">See Details</button>
@@ -32,8 +32,8 @@ const loadDetails = (phoneId) => {
 }
 const showDetails = (detail) => {
     const div = document.getElementById("phone-details");
-    div.innerHTML = `<div class="card h-100 text-center shadow-lg  p-3">
-        <img id="phone-image" src="${detail.image}" class="card-img-top img-fluid w-50 h-75" alt="...">
+    div.innerHTML = `<div class="card h-100 text-center shadow-lg">
+        <img id="phone-image" src="${detail.image}" class="card-img-top img-fluid w-25 h-25" alt="...">
         
             <h5>Name:${detail.name}</h5>
             <h5>Realease Date :${detail.name}</h5>
