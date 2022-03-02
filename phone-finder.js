@@ -12,12 +12,7 @@ const searchPhone = () => {
         .then((res) => res.json()).then((data) => { if (data.status == false) { document.getElementById("no-result").style.display = "block"; } else { displaySearchResult(data.data.slice(0, 20)); document.getElementById("no-result").style.display = "none"; } });
 }
 
-//     const url = `https://openapi.programming-hero.com/api/phones?search=${searchText}`;
-//     fetch(url)
-//         .then(res => res.json())
-//         .then(data =>
-//             displaySearchResult(data.data.slice(0, 20)))
-// }
+
 
 
 const displaySearchResult = phones => {
