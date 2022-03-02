@@ -15,11 +15,11 @@ const displaySearchResult = phones => {
         const searchResult = document.getElementById("search-result");
         const div = document.createElement('div');
         div.innerHTML = ` <div class="card h-100 text-center shadow-lg">
-        <img id="phone-image" src="${phone.image}" class="card-img-top img-fluid w-25 h-25" alt="...">
+        <img id="phone-image" src="${phone.image}" class="card-img-top img-fluid w-25 h-50" alt="...">
         <h3>Name:${phone.phone_name}</h3>
         <p>Brand: ${phone.brand}</p>
-        <button id="details-btn" onclick="loadDetails('${phone.slug}')">See Details</button>
-    </div >`
+        <button id="details-btn" onclick="loadDetails('${phone.slug}')" class="w-50 mx-auto mb-3 p-2 rounded"> See Details</button >
+    </div > `
         searchResult.appendChild(div);
     }
 }
@@ -32,11 +32,11 @@ const loadDetails = (phoneId) => {
 }
 const showDetails = (detail) => {
     const div = document.getElementById("phone-details");
-    div.innerHTML = `<div class="card h-100 text-center shadow-lg">
+    div.innerHTML = `<div class="card h-100 text-center shadow-lg mx-auto">
         <img id="phone-image" src="${detail.image}" class="card-img-top img-fluid w-25 h-25" alt="...">
-        
+            <p class="text-center pt-3 fw-bold">llsdksl</p>
             <h5>Name:${detail.name}</h5>
-            <h5>Realease Date :${detail.name}</h5>
+            <h5>Realease Date :${detail.releaseDate}</h5>
     </div >`
     console.log(detail);
 }

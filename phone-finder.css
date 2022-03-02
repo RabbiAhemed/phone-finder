@@ -1,5 +1,18 @@
+/* body{
+    overflow: hidden;
+} */
+
+
 /* phone-image */   
 #phone-image{
     margin: auto;
     margin-top: 10%;
 }
+
+/* details-btn */
+/* From cssbuttons.io */
+#details-btn {
+    background-color: aqua;
+    border: none;
+
+   }
